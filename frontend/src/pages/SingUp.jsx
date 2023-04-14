@@ -23,7 +23,7 @@ export const SingUp = () => {
                          user ,
                          {headers: {'Content-Type': 'application/json'}},
                          {withCredentials: true}).then((e)=>{
-                           if(e.response.status === 400){
+                           if(e.status === 400){
                             toast.error("Erro! Email já está sendo utilizado",{
                               position: "top-right",
                               autoClose: 5000,

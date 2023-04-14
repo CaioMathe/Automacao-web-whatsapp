@@ -1,11 +1,8 @@
 from rest_framework import serializers
-from .models import User
+from .models import User, Mensagem
 from rest_framework.validators import ValidationError
 
 class SignUpSerializer(serializers.ModelSerializer):
-    # email = serializers.CharField(max_length=80)
-    # username = serializers.CharField(max_length=20)
-    # password = serializers.CharField(max_length=20)
 
     class Meta:
         model= User
@@ -24,3 +21,9 @@ class SignUpSerializer(serializers.ModelSerializer):
         user.save()
         
         return user
+    
+class MensagemSerializer(serializers.ModelSerializer):
+    # id_user = User()
+    class Meta:
+        model= Mensagem
+        fields = ['id', 'mensagem']

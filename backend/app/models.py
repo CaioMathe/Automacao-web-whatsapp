@@ -28,7 +28,7 @@ class User(AbstractUser):
         return self.username
     
 
-class Contatos(models.Model):
+class Mensagem(models.Model):
     id = models.AutoField(primary_key=True)
-    id_user = models.ForeignKey('User', on_delete=models.CASCADE)
-    Number = models.IntegerField(blank=True, null=True)
+    id_user = models.ForeignKey('User',on_delete=models.CASCADE)
+    mensagem = models.CharField(max_length=120, default=None)

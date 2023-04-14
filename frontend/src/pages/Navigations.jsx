@@ -13,7 +13,7 @@ export function Navigation() {
      return ( 
       < >
         <Navbar bg="primary" variant="dark" className='nav'>
-          <Navbar.Brand href="/">Autenticação</Navbar.Brand>            
+          <Navbar.Brand href="/">Automação</Navbar.Brand>            
           <Nav className="me-auto sticky-top"> 
           {isAuth ? <Nav.Link href="/">Home</Nav.Link> : null}
           </Nav>
